@@ -1,8 +1,69 @@
-#customers table name
-select * from customers;
+#Customers table name
+select * from Customers;
 
 \
 #City column
-select City from customers;
+select City from Customers;
 
+\
+#Select all the different values from the Country column in the Customers table.
+select distinct Country from Customers
+
+\
+#Select all records where the City column has the value "Berlin".
+select * from Customers where City="Berlin"
+
+\
+Use the NOT keyword to select all records where City is NOT "Berlin".
+select * from Customers where Not City="Berlin"
+\
+Select all records where the CustomerID column has the value 32.
+select * from Customers where CustomerID =32
+\
+Select all records where the City column has the value 'Berlin' and the PostalCode column has the value 12209
+select * from Customers where City="Berlin" and PostalCode=12209
+\
+Select all records where the City column has the value 'Berlin' or 'London'.
+select * from Customers where City="Berlin" or City="London"
+\
+Select all records from the Customers table, sort the result alphabetically by the column City.
+select * from Customers order by City
+\
+Select all records from the Customers table, sort the result reversed alphabetically by the column City.
+select * from Customers order by City desc
+\
+Select all records from the Customers table, sort the result alphabetically, first by the column Country, then, by the column City.
+select * from Customers order by Country,City
+\
+Insert a new record in the Customers table.
+insert into Customers (CustomerName, 
+Address, 
+City, 
+PostalCode,
+Country)
+values (
+'Hekkan Burger',
+'Gateveien 15',
+'Sandnes',
+'4306',
+'Norway';
+)
+\
+
+Select all records from the Customers where the PostalCode column is empty.
+SELECT * FROM Customers WHERE PostalCode is Null
+\
+
+Select all records from the Customers where the PostalCode column is NOT empty.
+SELECT * FROM Customers WHERE PostalCode is Not Null
+\
+Update the City column of all records in the Customers table.
+Update Customers set City="Oslo"
+
+\
+Set the value of the City columns to 'Oslo', but only the ones where the Country column has the value "Norway".
+Update Customers set City="Oslo" where Country="Norway"
+\
+Update the City value and the Country value.
+update Customers set City="Oslo",Country="Norway" where CustomerID=32
 \
