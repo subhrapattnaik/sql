@@ -67,3 +67,4 @@ Update Customers set City="Oslo" where Country="Norway"
 Update the City value and the Country value.
 update Customers set City="Oslo",Country="Norway" where CustomerID=32
 \
+https://www.w3schools.com/sql/exercise.asp?filename=exercise_update3
