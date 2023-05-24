@@ -1,0 +1,8 @@
+#customers table name
+select * from customers;
+
+\
+#City column
+select City from customers;
+
+\
